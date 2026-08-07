@@ -1000,3 +1000,60 @@ footer p span {
     filter: none;
   }
 }
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+main,
+.hero,
+.hero-inner,
+.section,
+.container {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.network-canvas,
+.grid-bg {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .hero-inner,
+  .hero-terminal,
+  .terminal,
+  .terminal-head,
+  .terminal-body,
+  .card,
+  .doc-card,
+  .commit-card,
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-terminal {
+    overflow: hidden;
+  }
+
+  .terminal-body {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
+  .code-line {
+    width: max-content;
+    min-width: 100%;
+  }
+}
